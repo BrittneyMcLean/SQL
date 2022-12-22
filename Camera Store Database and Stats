@@ -1,0 +1,27 @@
+-- Create a camera store database
+
+CREATE TABLE camera_store (id INTEGER PRIMARY KEY, product_name TEXT, quantity_available INTEGER, price INTEGER, store_location TEXT, aisle TEXT) ;
+
+INSERT INTO camera_store VALUES (1, "Camera Body", 5, 700, "Broadway Blvd", 2 );
+INSERT INTO camera_store VALUES (2, "Kit Lens", 7, 150, "Speedway St", 2 );
+INSERT INTO camera_store VALUES (3, "Telephoto Lens", 3, 325, "Broadway Blvd", 2);
+INSERT INTO camera_store VALUES (4, "ND Filters", 12, 45, "Broadway Blvd", 2);
+INSERT INTO camera_store VALUES (5, "Camera Bag", 15, 45, "Speedway St", 3);
+INSERT INTO camera_Store VALUES (6, "Camera Backpack", 20, 60, "Speedway St", 3);
+INSERT INTO camera_store VALUES (7, "Macro Lens", 5, 275, "Broadway Blvd", 2);
+INSERT INTO camera_store VALUES (8, "GoPro Camera", 30, 399, "Speedway St", 4);
+INSERT INTO camera_store VALUES (9, "GoPro Accessories Bundle", 40, 45, "Speedway St", 4);
+INSERT INTO camera_store VALUES (10, "DJI Drone", 28, 1499, "Speedway St", 3);
+INSERT INTO camera_store VALUES (11, "Tripod", 32, 65, "Speedway st", 3);
+INSERT INTO camera_store VALUES (12, "Camera Remote", 22, 20, "Broadway Blvd", 2);
+INSERT INTO camera_store VALUES (13, "UV Filter", 47, 20, "Broadway Blvd", 2);
+INSERT INTO camera_store VALUES (14, "128GB Micro SD Card", 55, 15, "Broadway Blvd", 5);
+
+-- Display store items by ascending price.
+SELECT * FROM camera_store
+ORDER BY price asc;
+
+--What is the average price of items found at the Broadway Location?
+SELECT AVG(price) "Average Item Price"
+FROM camera_store
+where store_location='Broadway Blvd'; 
