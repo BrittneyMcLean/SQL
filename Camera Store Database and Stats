@@ -17,11 +17,13 @@ INSERT INTO camera_store VALUES (12, "Camera Remote", 22, 20, "Broadway Blvd", 2
 INSERT INTO camera_store VALUES (13, "UV Filter", 47, 20, "Broadway Blvd", 2);
 INSERT INTO camera_store VALUES (14, "128GB Micro SD Card", 55, 15, "Broadway Blvd", 5);
 
--- Display store items by ascending price.
+#Display store items by ascending price.
+
 SELECT * FROM camera_store
 ORDER BY price asc;
 
---What is the average price of items found at the Broadway Location?
+#What is the average price of items found at the Broadway Location?
+
 SELECT AVG(price) "Average Item Price"
 FROM camera_store
 where store_location='Broadway Blvd'; 
